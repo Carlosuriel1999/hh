@@ -12,6 +12,7 @@
 		FA7F59D2216E968800EC2EC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7F59D0216E968800EC2EC8 /* Main.storyboard */; };
 		FA7F59D4216E968900EC2EC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7F59D3216E968900EC2EC8 /* Assets.xcassets */; };
 		FA7F59D7216E968900EC2EC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7F59D5216E968900EC2EC8 /* LaunchScreen.storyboard */; };
+		FA7F59E0216EA3FD00EC2EC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7F59DF216EA3FD00EC2EC8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA7F59D3216E968900EC2EC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA7F59D6216E968900EC2EC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA7F59D8216E968900EC2EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7F59DF216EA3FD00EC2EC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7F59E0216EA3FD00EC2EC8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				FA7F59CB216E968800EC2EC8 /* mapitas */,
 				FA7F59CA216E968800EC2EC8 /* Products */,
+				FA7F59DE216EA3FD00EC2EC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				FA7F59D8216E968900EC2EC8 /* Info.plist */,
 			);
 			path = mapitas;
+			sourceTree = "<group>";
+		};
+		FA7F59DE216EA3FD00EC2EC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F59DF216EA3FD00EC2EC8 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +108,11 @@
 				TargetAttributes = {
 					FA7F59C8216E968800EC2EC8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

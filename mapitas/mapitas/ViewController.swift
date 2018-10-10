@@ -14,6 +14,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     @IBOutlet weak var mapa: MKMapView!
     let locationManager = CLLocationManager()
+    let location = CLLocation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         locationManager.startUpdatingLocation()
         mapa.showsUserLocation = true
+        
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -38,5 +41,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
     }
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {  //para saber locacisacion
+        print(location.coordinate.latitude,location.coordinate.longitude)
+        print(locations)
+    }
 }
 
